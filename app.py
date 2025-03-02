@@ -86,8 +86,3 @@ async def bfs_crawl(start_url, max_depth):
 async def crawl_web(data: CrawlRequest):
     result = await bfs_crawl(data.start_url, data.max_depth)
     return {"crawled_pages": result}
-
-def start():
-    uvicorn.run(app, host="0.0.0.0", port=5000)
-
-start()
